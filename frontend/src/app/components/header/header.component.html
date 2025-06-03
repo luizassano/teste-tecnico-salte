@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="toolbar-content">
+    <div class="logo-section" (click)="navigateToProducts()">
+      <mat-icon class="logo-icon">store</mat-icon>
+      <span class="logo-text">Loja de Produtos</span>
+    </div>
+
+    <div class="nav-section">
+      <button mat-button (click)="navigateToProducts()" class="nav-button">
+        <mat-icon>inventory_2</mat-icon>
+        Produtos
+      </button>
+
+      <button mat-button (click)="navigateToCart()" class="nav-button cart-button">
+        <mat-icon [matBadge]="cartItemsCount" [matBadgeHidden]="cartItemsCount === 0" matBadgeColor="accent">
+          shopping_cart
+        </mat-icon>
+        Carrinho
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
