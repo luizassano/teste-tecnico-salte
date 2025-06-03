@@ -1,5 +1,8 @@
 # Sistema de Gerenciamento de Produtos e Carrinho
 
+## 📹 Demonstração em Vídeo
+[![Vídeo de Demonstração](https://img.youtube.com/vi/N0Gs04v3qiQ/0.jpg)](https://youtu.be/N0Gs04v3qiQ)
+
 Este é um projeto completo de e-commerce com backend NestJS e frontend Angular, desenvolvido como teste técnico.
 
 ## 🚀 Tecnologias Utilizadas
