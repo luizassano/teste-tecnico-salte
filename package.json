@@ -1,0 +1,30 @@
+{
+  "name": "teste-tecnico-salte",
+  "version": "1.0.0",
+  "description": "Sistema completo de gerenciamento de produtos e carrinho com NestJS e Angular",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "start:backend": "cd backend && npm run start:dev",
+    "start:frontend": "cd frontend && ng serve",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && ng build",
+    "test:backend": "cd backend && npm run test",
+    "test:frontend": "cd frontend && ng test"
+  },
+  "keywords": [
+    "nestjs",
+    "angular",
+    "typescript",
+    "mysql",
+    "ecommerce",
+    "carrinho",
+    "produtos"
+  ],
+  "author": "Desenvolvedor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usuario/teste-tecnico-salte.git"
+  }
+}
