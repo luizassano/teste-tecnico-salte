@@ -30,4 +30,9 @@ out/
 coverage/
 .nyc_output/
 tmp/
-temp/ 
+temp/
+
+# Configuração de line endings
+* text=auto
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf 
