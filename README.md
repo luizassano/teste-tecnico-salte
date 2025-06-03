@@ -1,94 +1,87 @@
 # Sistema de Gerenciamento de Produtos e Carrinho
 
-## 📹 Demonstração em Vídeo
+## Demonstração em Vídeo
 [![Vídeo de Demonstração](https://img.youtube.com/vi/N0Gs04v3qiQ/0.jpg)](https://youtu.be/N0Gs04v3qiQ)
 
-Este é um projeto completo de e-commerce com backend NestJS e frontend Angular, desenvolvido como teste técnico.
+Este é um projeto de e-commerce desenvolvido como teste técnico, utilizando NestJS no backend e Angular no frontend.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias
 
-### Backend (NestJS)
-- **NestJS** - Framework Node.js moderno
-- **TypeORM** - ORM para banco de dados
-- **MySQL** - Banco de dados relacional
-- **Swagger** - Documentação automática da API
-- **Class Validator** - Validação de dados
-- **CORS** - Configurado para desenvolvimento
+### Backend
+- NestJS - Framework Node.js
+- TypeORM para banco de dados
+- MySQL como banco de dados
+- Swagger para documentação
+- Class Validator para validações
+- CORS habilitado
 
-### Frontend (Angular)
-- **Angular 19** - Framework frontend moderno
-- **Angular Material** - Biblioteca de componentes UI
-- **RxJS** - Programação reativa
-- **TypeScript** - Linguagem tipada
-- **SCSS** - Pré-processador CSS
-- **Responsive Design** - Layout adaptável
+### Frontend
+- Angular 19
+- Angular Material
+- RxJS
+- TypeScript
+- SCSS
+- Design responsivo
 
-## 📋 Funcionalidades
+## Funcionalidades
 
-### ✅ Backend
-- [x] Cadastro de produtos com validação
-- [x] Listagem de produtos com filtro e paginação
-- [x] Busca por nome ou descrição
-- [x] Operações CRUD completas
-- [x] Tratamento de erros padronizado
-- [x] Documentação Swagger automática
-- [x] Validação de dados robusta
+### Backend
+- API REST para produtos
+- Validação de dados
+- Busca e filtros
+- Paginação
+- Documentação automática
+- Tratamento de erros
 
-### ✅ Frontend
-- [x] Lista de produtos com grid responsivo
-- [x] Filtro de produtos em tempo real
-- [x] Paginação de resultados
-- [x] Detalhes do produto
-- [x] Carrinho de compras funcional
-- [x] Persistência do carrinho no localStorage
-- [x] Interface moderna com Material Design
-- [x] Navegação intuitiva
-- [x] Feedback visual para o usuário
+### Frontend
+- Lista de produtos
+- Busca em tempo real
+- Carrinho de compras
+- Interface responsiva
+- Feedback visual
+- Persistência local
 
-## 🛠️ Instalação e Execução
+## Como Executar
 
 ### Pré-requisitos
-- Node.js (versão 18 ou superior)
-- MySQL (versão 8 ou superior)
+- Node.js 18+
+- MySQL 8+
 - npm ou yarn
 
-### 1. Configuração do Banco de Dados
+### Banco de Dados
 ```sql
 CREATE DATABASE products_db;
 ```
 
-### 2. Backend (NestJS)
+### Backend
 ```bash
 cd backend
 npm install
 cp env.example .env
-# Configure as variáveis de ambiente no arquivo .env
+# Ajuste as variáveis no .env
 npm run start:dev
 ```
 
-O backend estará rodando em: `http://localhost:3000`
-Documentação Swagger: `http://localhost:3000/api`
+Backend: http://localhost:3000
+Swagger: http://localhost:3000/api
 
-### 3. Frontend (Angular)
+### Frontend
 ```bash
 cd frontend
 npm install
 ng serve
 ```
 
-O frontend estará rodando em: `http://localhost:4200`
+Frontend: http://localhost:4200
 
-## 📚 Documentação da API
+## API
 
-### Endpoints Principais
-
-#### Produtos
-- `GET /products` - Listar produtos
-  - Query params: `search`, `page`, `limit`
-- `GET /products/:id` - Buscar produto por ID
-- `POST /products` - Criar novo produto
-- `PATCH /products/:id` - Atualizar produto
-- `DELETE /products/:id` - Deletar produto
+### Produtos
+- GET /products - Lista produtos
+- GET /products/:id - Busca produto
+- POST /products - Cria produto
+- PATCH /products/:id - Atualiza produto
+- DELETE /products/:id - Remove produto
 
 ### Exemplo de Produto
 ```json
@@ -100,103 +93,86 @@ O frontend estará rodando em: `http://localhost:4200`
 }
 ```
 
-## 🎨 Interface do Usuário
+## Interface
 
-### Páginas Principais
-1. **Lista de Produtos** - Grid responsivo com busca e paginação
-2. **Detalhes do Produto** - Visualização completa com opção de adicionar ao carrinho
-3. **Carrinho de Compras** - Gerenciamento de itens e quantidades
+- Lista de produtos com grid
+- Detalhes do produto
+- Carrinho de compras
+- Design responsivo
+- Feedback visual
+- Estados de loading
 
-### Recursos de UX
-- Design responsivo para mobile e desktop
-- Feedback visual com snackbars
-- Loading states
-- Estados vazios informativos
-- Navegação intuitiva
-
-## 🔧 Estrutura do Projeto
+## Estrutura
 
 ```
-├── backend/                 # API NestJS
+├── backend/
 │   ├── src/
-│   │   ├── dto/            # Data Transfer Objects
-│   │   ├── entities/       # Entidades TypeORM
-│   │   ├── products/       # Módulo de produtos
-│   │   ├── app.module.ts   # Módulo principal
-│   │   └── main.ts         # Ponto de entrada
-│   └── README-BACKEND.md   # Documentação do backend
+│   │   ├── dto/
+│   │   ├── entities/
+│   │   ├── products/
+│   │   ├── app.module.ts
+│   │   └── main.ts
+│   └── README-BACKEND.md
 │
-├── frontend/               # Aplicação Angular
+├── frontend/
 │   ├── src/app/
-│   │   ├── components/     # Componentes da aplicação
-│   │   ├── models/         # Interfaces TypeScript
-│   │   ├── services/       # Serviços Angular
-│   │   └── app.routes.ts   # Configuração de rotas
-│   └── README-FRONTEND.md  # Documentação do frontend
+│   │   ├── components/
+│   │   ├── models/
+│   │   ├── services/
+│   │   └── app.routes.ts
+│   └── README-FRONTEND.md
 │
-└── README.md              # Este arquivo
+└── README.md
 ```
 
-## 🧪 Testes
+## Testes
 
 ### Backend
 ```bash
 cd backend
 npm run test
-npm run test:e2e
 ```
 
 ### Frontend
 ```bash
 cd frontend
 ng test
-ng e2e
 ```
 
-## 🚀 Deploy
+## Deploy
 
 ### Backend
-1. Configure as variáveis de ambiente de produção
-2. Execute `npm run build`
-3. Execute `npm run start:prod`
+1. Ajuste as variáveis de produção
+2. npm run build
+3. npm run start:prod
 
 ### Frontend
-1. Execute `ng build --prod`
-2. Sirva os arquivos da pasta `dist/`
+1. ng build --prod
+2. Sirva a pasta dist/
 
-## 📝 Validações Implementadas
+## Validações
 
-### Produto
-- **Nome**: Obrigatório, string não vazia
-- **Descrição**: Obrigatória, string não vazia
-- **Preço**: Obrigatório, número maior que zero
-- **Imagem**: Opcional, string (URL)
+- Nome: obrigatório
+- Descrição: obrigatória
+- Preço: maior que zero
+- Imagem: opcional (URL)
 
-## 🔒 Segurança
+## Segurança
 
-- Validação de dados no backend e frontend
-- Sanitização de inputs
-- CORS configurado adequadamente
-- Tratamento de erros sem exposição de dados sensíveis
+- Validação de dados
+- Sanitização
+- CORS
+- Tratamento de erros
 
-## 🎯 Próximos Passos
+## Melhorias Futuras
 
-- [ ] Autenticação e autorização
-- [ ] Upload de imagens
-- [ ] Categorias de produtos
-- [ ] Sistema de avaliações
-- [ ] Checkout e pagamento
-- [ ] Histórico de pedidos
-
-## 👨‍💻 Desenvolvedor
-
-Projeto desenvolvido como teste técnico, demonstrando conhecimentos em:
-- Desenvolvimento full-stack
-- Arquitetura de software
-- Boas práticas de código
-- UI/UX moderno
-- Documentação técnica
+- Autenticação
+- Upload de imagens
+- Categorias
+- Avaliações
+- Checkout
+- Histórico
 
 ---
 
-**Nota**: Este projeto foi desenvolvido com foco em demonstrar habilidades técnicas e boas práticas de desenvolvimento.
+Projeto desenvolvido como teste técnico.
